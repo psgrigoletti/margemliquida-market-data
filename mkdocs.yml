@@ -25,11 +25,11 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
-watch:
-   - margemliquida-market-data
+#watch:
+#   - margemliquida-market-data
 
 plugins:
-- macros
+#- macros
 - mkdocstrings:
     handlers:
       python:
