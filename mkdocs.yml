@@ -29,7 +29,7 @@ extra_css:
 #   - margemliquida-market-data
 
 plugins:
-#- macros
+- macros
 - mkdocstrings:
     handlers:
       python:
