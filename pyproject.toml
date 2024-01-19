@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "margemliquida-market-data"
-version = "0.1.4"
-description = "Utilitários para obtenção de dados do mercado financeiro"
+version = "0.1.5"
+description = "Biblioteca utilitária para obtenção de dados do mercado financeiro"
 authors = ["Pablo Souza Grigoletti <psgrigoletti@gmail.com>"]
 packages = [{include = "margemliquida_market_data"}]
 license = "MIT"
