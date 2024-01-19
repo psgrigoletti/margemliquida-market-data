@@ -1,0 +1,36 @@
+site_name: margemliquida-market-data
+repo_url: https://github.com/psgrigoletti/margemliquida-market-data
+repo_name: psgrigoletti/margemliquida-market-data
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+watch:
+   - margemliquida-market-data
+
+plugins:
+- macros
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [margemliquida-market-data]
