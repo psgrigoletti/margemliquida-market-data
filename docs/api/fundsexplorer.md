@@ -1,1 +1,1 @@
-::: fundsexplorer
+::: src.fundsexplorer.fundsexplorer

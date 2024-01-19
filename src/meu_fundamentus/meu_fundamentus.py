@@ -1,8 +1,10 @@
-from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
+
+import src.meu_fundamentus.meu_fundamentus as fd
+
 from .utils import perc_to_float
-import fundamentus as fd
 
 hdr = {
     "User-agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201",
