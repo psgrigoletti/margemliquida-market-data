@@ -3,12 +3,12 @@ utils:
     Utility helpers.
 """
 
-import pandas as pd
+# import pandas as pd
 import logging
 
-from tabulate import tabulate
-from datetime import datetime
+# from datetime import datetime
 from dateutil.parser import parse
+from tabulate import tabulate
 
 
 def dt_iso8601(val):
@@ -18,10 +18,10 @@ def dt_iso8601(val):
         scalar
     """
     try:
-        dt = parse(val, dayfirst=True).strftime("%Y-%m-%d")
+        dt = parse(val, dayfirst=True).strftime('%Y-%m-%d')
         return dt
-    except:
-        logging.debug("Error...")
+    except Exception:
+        logging.debug('Error...')
         return
 
 
@@ -32,23 +32,23 @@ def from_pt_br(val):
         DataFrame()
     """
     res = val
-    res = res.str.strip("?")
-    res = res.str.replace("(", "")
-    res = res.str.replace(")", "")
-    res = res.str.replace("$", "")
-    res = res.str.replace(".", "")
-    res = res.str.replace("/", "")
-    res = res.str.replace("ç", "c")
-    res = res.str.replace("ã", "a")
-    res = res.str.replace("é", "e")
-    res = res.str.replace("ê", "e")
-    res = res.str.replace("ó", "o")
-    res = res.str.replace("õ", "o")
-    res = res.str.replace("í", "i")
-    res = res.str.replace("ú", "u")
-    res = res.str.replace("Ú", "U")
-    res = res.str.replace(" ", "_")
-    res = res.str.replace("__", "_")
+    res = res.str.strip('?')
+    res = res.str.replace('(', '')
+    res = res.str.replace(')', '')
+    res = res.str.replace('$', '')
+    res = res.str.replace('.', '')
+    res = res.str.replace('/', '')
+    res = res.str.replace('ç', 'c')
+    res = res.str.replace('ã', 'a')
+    res = res.str.replace('é', 'e')
+    res = res.str.replace('ê', 'e')
+    res = res.str.replace('ó', 'o')
+    res = res.str.replace('õ', 'o')
+    res = res.str.replace('í', 'i')
+    res = res.str.replace('ú', 'u')
+    res = res.str.replace('Ú', 'U')
+    res = res.str.replace(' ', '_')
+    res = res.str.replace('__', '_')
 
     return res
 
@@ -64,8 +64,8 @@ def fmt_dec(val):
     """
 
     res = val
-    res = res.str.replace(".", "")
-    res = res.str.replace(",", ".")
+    res = res.str.replace('.', '')
+    res = res.str.replace(',', '.')
     #   res = res.astype(float)
     #   res = res.astype(float) / 100
     #   res = '{:4.2f}%'.format(res)
@@ -84,9 +84,9 @@ def perc_to_float(val):
     """
 
     res = val
-    res = res.str.rstrip("%")
-    res = res.str.replace(".", "")
-    res = res.str.replace(",", ".")
+    res = res.str.rstrip('%')
+    res = res.str.replace('.', '')
+    res = res.str.replace(',', '.')
     res = res.astype(float) / 100
 
     return res
@@ -96,7 +96,9 @@ def print_csv(data):
     """
     CSV printed to stdout
     """
-    print(data.to_csv(index=True, header=True, decimal=".", float_format="%.4f"))
+    print(
+        data.to_csv(index=True, header=True, decimal='.', float_format='%.4f')
+    )
 
     return
 
@@ -111,8 +113,8 @@ def print_table(data):
         tabulate(
             data,
             headers=data.columns,
-            tablefmt="presto",
-            floatfmt=".4f",
+            tablefmt='presto',
+            floatfmt='.4f',
             disable_numparse=False,
         )
     )

@@ -1,1 +1,1 @@
-::: src.fundsexplorer.fundsexplorer
+::: margemliquida_market_data.fundsexplorer.fundsexplorer

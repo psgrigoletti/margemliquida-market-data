@@ -15,18 +15,18 @@ class CarteiraTeoricaB3:
 
     @staticmethod
     def _buscar_carteira_teorica(indice, espera=6):
-        url = f"https://sistemaswebb3-listados.b3.com.br/indexPage/day/{indice.upper()}?language=pt-br"
+        url = f'https://sistemaswebb3-listados.b3.com.br/indexPage/day/{indice.upper()}?language=pt-br'
 
         wd = configura_webdriver_firefox()
 
         wd.get(url)
-        wd.find_element(By.ID, "segment").send_keys("Setor de Atuação")
+        wd.find_element(By.ID, 'segment').send_keys('Setor de Atuação')
         sleep(espera)
 
-        wd.find_element(By.LINK_TEXT, "Download").click()
+        wd.find_element(By.LINK_TEXT, 'Download').click()
         sleep(espera)
 
-        path = "/tmp/downloads/"
+        path = '/tmp/downloads/'
         lista = os.listdir(path)
         lista = [path + arquivo for arquivo in lista]
         # print(lista)
@@ -35,12 +35,12 @@ class CarteiraTeoricaB3:
 
         return pd.read_csv(
             file_name,
-            sep=";",
-            encoding="ISO-8859-1",
+            sep=';',
+            encoding='ISO-8859-1',
             skipfooter=2,
-            engine="python",
-            thousands=".",
-            decimal=",",
+            engine='python',
+            thousands='.',
+            decimal=',',
             header=1,
             index_col=False,
         )
@@ -48,40 +48,46 @@ class CarteiraTeoricaB3:
     @staticmethod
     def _corrigir_setores_ibov(setor):
         if (
-            setor == "Cons N  Básico"
-            or setor == "Cons N Cíclico"
-            or setor == "Cons N Ciclico"
+            setor == 'Cons N  Básico'
+            or setor == 'Cons N Cíclico'
+            or setor == 'Cons N Ciclico'
         ):
-            return "Consumo Não-Cíclico"
-        if setor == "Financ e Outros" or setor == "Financeiro e Outros":
-            return "Financeiro"
-        if setor == "Utilidade Públ":
-            return "Utilidade Pública"
-        if setor == "Diverso":
-            return "Diversos"
-        if setor == "Holdings Divers":
-            return "Holdings Diversas"
-        if setor == "Mats Básicos":
-            return "Materiais Básicos"
-        if setor == "Tec.Informação":
-            return "Tecnologia da Informação"
-        if setor == "Telecomunicaçã":
-            return "Telecomunicação"
-        if setor == "Bens Indls":
-            return "Bens Industriais"
+            return 'Consumo Não-Cíclico'
+        if setor == 'Financ e Outros' or setor == 'Financeiro e Outros':
+            return 'Financeiro'
+        if setor == 'Utilidade Públ':
+            return 'Utilidade Pública'
+        if setor == 'Diverso':
+            return 'Diversos'
+        if setor == 'Holdings Divers':
+            return 'Holdings Diversas'
+        if setor == 'Mats Básicos':
+            return 'Materiais Básicos'
+        if setor == 'Tec.Informação':
+            return 'Tecnologia da Informação'
+        if setor == 'Telecomunicaçã':
+            return 'Telecomunicação'
+        if setor == 'Bens Indls':
+            return 'Bens Industriais'
         else:
             return setor
 
     @staticmethod
     def buscar_dados_ifix():
-        ifix = CarteiraTeoricaB3._buscar_carteira_teorica("IFIX")
-        ifix.drop(columns=["Setor", "Tipo", "Part. (%)Acum."], inplace=True)
+        ifix = CarteiraTeoricaB3._buscar_carteira_teorica('IFIX')
+        ifix.drop(columns=['Setor', 'Tipo', 'Part. (%)Acum.'], inplace=True)
         return ifix
 
     @staticmethod
     def buscar_dados_ibov():
-        ibov = CarteiraTeoricaB3.buscar_carteira_teorica("IBOV")
-        ibov["Subsetor"] = ibov["Setor"].apply(lambda s: s[s.rfind("/") + 1 :].strip())
-        ibov["Setor"] = ibov["Setor"].apply(lambda s: s[: s.rfind("/")].strip())
-        ibov["Setor"] = ibov["Setor"].apply(CarteiraTeoricaB3._corrigir_setores_ibov)
+        ibov = CarteiraTeoricaB3.buscar_carteira_teorica('IBOV')
+        ibov['Subsetor'] = ibov['Setor'].apply(
+            lambda s: s[s.rfind('/') + 1 :].strip()
+        )
+        ibov['Setor'] = ibov['Setor'].apply(
+            lambda s: s[: s.rfind('/')].strip()
+        )
+        ibov['Setor'] = ibov['Setor'].apply(
+            CarteiraTeoricaB3._corrigir_setores_ibov
+        )
         return ibov

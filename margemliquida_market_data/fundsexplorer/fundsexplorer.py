@@ -1,4 +1,4 @@
-""" Módulo que trabalha com os dados do site https://www.fundsexplorer.com.br/.
+"""Módulo que trabalha com os dados do site https://www.fundsexplorer.com.br/.
 """
 
 from io import StringIO
@@ -8,7 +8,7 @@ import pandas as pd
 
 from margemliquida_market_data.selenium_config import meu_firefox
 
-URL = "https://www.fundsexplorer.com.br/ranking"
+URL = 'https://www.fundsexplorer.com.br/ranking'
 
 
 def buscar_dados_fundsexplorer():
@@ -22,6 +22,6 @@ def buscar_dados_fundsexplorer():
     wd.get(URL)
     sleep(8)
     html_content = wd.page_source
-    df = pd.read_html(StringIO(str(html_content)), encoding="utf-8")[0]
-    df.rename(columns={"Fundos": "Código"}, inplace=True)
+    df = pd.read_html(StringIO(str(html_content)), encoding='utf-8')[0]
+    df.rename(columns={'Fundos': 'Código'}, inplace=True)
     return df
