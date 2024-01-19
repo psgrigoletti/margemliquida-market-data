@@ -1,19 +1,20 @@
+from io import StringIO
+
+import fundamentus as fd
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-import src.meu_fundamentus.meu_fundamentus as fd
-
 from .utils import perc_to_float
 
-hdr = {
+HEADER = {
     "User-agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201",
     "Accept": "text/html, text/plain, text/css, text/sgml, */*;q=0.01",
     "Accept-Encoding": "gzip, deflate",
 }
 
 
-def get_df_setores(hdr=hdr):
+def get_df_setores(hdr=HEADER):
     url = "https://www.fundamentus.com.br/buscaavancada.php"
     response = requests.get(url, headers=hdr)
     soup = BeautifulSoup(response.text, "html.parser")
@@ -36,10 +37,17 @@ def get_df_acoes_do_setor(id_setor):
     return df
 
 
-def get_df_fiis(hdr=hdr):
+def get_df_fiis(hdr=HEADER):
+    """get_df_fiis _summary_
+
+    Args:
+        hdr (_type_, optional): _description_. Defaults to hdr.
+
+    Returns:
+        _type_: _description_
+    """
     url = "https://www.fundamentus.com.br/fii_resultado.php"
     content = requests.get(url, headers=hdr)
-    from io import StringIO
 
     df = pd.read_html(
         StringIO(str(content.text)),
@@ -56,11 +64,9 @@ def get_df_fiis(hdr=hdr):
     return df
 
 
-def get_df_acoes(hdr=hdr, formato_original=False):
+def get_df_acoes(hdr=HEADER, formato_original=False):
     url = "https://www.fundamentus.com.br/resultado.php"
     content = requests.get(url, headers=hdr)
-
-    from io import StringIO
 
     if formato_original:
         df = pd.read_html(

@@ -6,7 +6,7 @@ from time import sleep
 
 import pandas as pd
 
-from selenium_config import meu_firefox
+from margemliquida_market_data.selenium_config import meu_firefox
 
 URL = "https://www.fundsexplorer.com.br/ranking"
 

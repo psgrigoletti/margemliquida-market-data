@@ -4,7 +4,9 @@ from time import sleep
 import pandas as pd
 from selenium.webdriver.common.by import By
 
-from libs.market_data.selenium_config.meu_firefox import configura_webdriver_firefox
+from margemliquida_market_data.selenium_config.meu_firefox import (
+    configura_webdriver_firefox,
+)
 
 
 class CarteiraTeoricaB3:

@@ -1,14 +1,27 @@
 [tool.poetry]
 name = "margemliquida-market-data"
-version = "0.1.0"
-description = "Utilitários para obtenção de dados do mercado"
+version = "0.1.3"
+description = "Utilitários para obtenção de dados do mercado financeiro"
 authors = ["Pablo Souza Grigoletti <psgrigoletti@gmail.com>"]
+packages = [{include = "margemliquida_market_data"}]
 license = "MIT"
 readme = "README.md"
+classifiers = [
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Software Development :: Libraries"
+]
+
+[tool.poetry.urls]
+"Documentação" = "https://margemliquida-market-data.readthedocs.io/pt/latest/"
+"Código" = "https://github.com/psgrigoletti/margemliquida-market-data"
+"Bug Tracker" = "https://github.com/psgrigoletti/margemliquida-market-data/issues"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-yfinance = "^0.2.33"
+python = "3.11.*"
+yfinance = "0.2.35"
 python-bcb = "^0.2.0"
 sidrapy = "^0.1.4"
 fundamentus = "^0.2.0"
@@ -31,11 +44,6 @@ mkdocstrings-python = "1.8.0"
 mkdocs-macros-plugin = "1.0.5"
 jinja2 = "3.1.3"
 
-[tool.poetry.urls]
-"Documentação" = "https://margemliquida-market-data.readthedocs.io/pt/latest/"
-"Código" = "https://github.com/psgrigoletti/margemliquida-market-data"
-"Bug Tracker" = "https://github.com/psgrigoletti/margemliquida-market-data/issues"
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -48,6 +56,6 @@ line_length = 79
 lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
-test = "pytest -s -x --cov=margemliquida-market-data -vv"
+test = "pytest -s -x --cov=margemliquida_market_data -vv"
 post_test = "coverage html"
 # publish = "poetry publish -u __token__ -p $NOTAS_MUSICAIS_TOKEN"
