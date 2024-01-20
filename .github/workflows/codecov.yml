@@ -23,13 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-          poetry shell
-          pip install flake8 pytest pytest-cov
-          pip install --user codecov
 
       - name: Run tests and generate coverage report
         run: |
-          pytest -m --cov ./margemliquida-market-data/ ./tests/
+          pytest -m --cov ./
           # ou o comando para executar seus testes e gerar relatório de cobertura
 
       - name: Upload coverage to Codecov
