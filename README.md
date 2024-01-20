@@ -7,8 +7,8 @@
 
 # :bulb: Biblioteca criada para:
 - Centralizar a busca de dados do mercado financeiro.
-- Aprender a publicar uma biblioteca no [Pypi](https://pypi.org/)
-- Aprender a publicar uma documentação no [Read the Docs](https://readthedocs.org/)
+- Aprender a publicar uma biblioteca no [Pypi](https://pypi.org/).
+- Aprender a publicar uma documentação no [Read the Docs](https://readthedocs.org/).
 
 
 # :bug: Issues para bugs ou features:
@@ -21,14 +21,15 @@
 
 
 # :construction: Todo list:
-- Em construção
+- ...
 
 
 # :pill: Links úteis:
 - [Documentação](https://margemliquida-market-data.readthedocs.io/pt/latest/)
+- ...
 
 # :bookmark: Links que usei e me ajudaram:
-
+- ...
 
 # :email: Contato:
 - Quer contribuir neste projeto?
