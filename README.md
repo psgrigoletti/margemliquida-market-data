@@ -3,11 +3,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
 [![codecov](https://codecov.io/gh/psgrigoletti/margemliquida-market-data/graph/badge.svg?token=17WYWJR1KR)](https://codecov.io/gh/psgrigoletti/margemliquida-market-data)
+[![CodeFactor](https://www.codefactor.io/repository/github/psgrigoletti/margemliquida-market-data/badge)](https://www.codefactor.io/repository/github/psgrigoletti/margemliquida-market-data)
 
 # :bulb: Biblioteca criada para:
-- Aprender a publicar uma biblioteca no Pypi
-- Aprender a publicar uma documentação no readthedocs
 - Centralizar a busca de dados do mercado financeiro.
+- Aprender a publicar uma biblioteca no [Pypi](https://pypi.org/)
+- Aprender a publicar uma documentação no [Read the Docs](https://readthedocs.org/)
 
 
 # :bug: Issues para bugs ou features:
