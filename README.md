@@ -1,4 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/margemliquida-market-data/badge/?version=latest)](https://margemliquida-market-data.readthedocs.io/pt/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
 
 
