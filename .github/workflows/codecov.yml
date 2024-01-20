@@ -25,14 +25,15 @@ jobs:
           pip install --user codecov
           pip install poetry
           poetry install
+          poetry shell
 
       - name: Run tests and generate coverage report
         run: |
-          pytest --cov ./margemliquida-market-data/ ./tests/ # ou o comando para executar seus testes e gerar relatório de cobertura
+          pytest --cov ./margemliquida-market-data/ ./tests/
+          # ou o comando para executar seus testes e gerar relatório de cobertura
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}  # Configure o CODECOV_TOKEN em suas configurações de GitHub Secrets
           verbose: true
-          
