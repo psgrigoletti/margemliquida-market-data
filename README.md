@@ -4,6 +4,7 @@
 [![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
 [![codecov](https://codecov.io/gh/psgrigoletti/margemliquida-market-data/graph/badge.svg?token=17WYWJR1KR)](https://codecov.io/gh/psgrigoletti/margemliquida-market-data)
 [![CodeFactor](https://www.codefactor.io/repository/github/psgrigoletti/margemliquida-market-data/badge)](https://www.codefactor.io/repository/github/psgrigoletti/margemliquida-market-data)
+[![Snyk Security](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/snyk-security.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/snyk-security.yml)
 
 # :bulb: Biblioteca criada para:
 - Centralizar a busca de dados do mercado financeiro.
