@@ -27,7 +27,8 @@ jobs:
 
       - name: Run tests and generate coverage report
         run: |
-          python -m pytest --cov ./tests/
+          pytest -s -x --cov=margemliquida_market_data -vv
+        # python -m pytest --cov ./tests/
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
