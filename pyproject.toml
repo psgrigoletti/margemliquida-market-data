@@ -67,3 +67,8 @@ test = "pytest -s -x --cov=margemliquida_market_data -vv"
 post_test = "coverage html"
 format = 'blue .  && isort .'
 # publish = "poetry publish -u __token__ -p $NOTAS_MUSICAIS_TOKEN"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
