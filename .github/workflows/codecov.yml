@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests and generate coverage report
         run: |
-          pytest -m --cov ./
+          pytest --cov ./
           # ou o comando para executar seus testes e gerar relatório de cobertura
 
       - name: Upload coverage to Codecov
