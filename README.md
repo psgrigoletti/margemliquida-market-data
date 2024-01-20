@@ -1,8 +1,5 @@
-[![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
-
 [![Documentation Status](https://readthedocs.org/projects/margemliquida-market-data/badge/?version=latest)](https://margemliquida-market-data.readthedocs.io/pt/latest/?badge=latest)
-
-
+[![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
 
 
 # :bulb: Biblioteca criada para:
