@@ -2,7 +2,7 @@
 [![Documentation Status](https://readthedocs.org/projects/margemliquida-market-data/badge/?version=latest)](https://margemliquida-market-data.readthedocs.io/pt/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pylint](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml/badge.svg)](https://github.com/psgrigoletti/margemliquida-market-data/actions/workflows/pylint.yml)
-
+[![codecov](https://codecov.io/gh/psgrigoletti/margemliquida-market-data/graph/badge.svg?token=17WYWJR1KR)](https://codecov.io/gh/psgrigoletti/margemliquida-market-data)
 
 # :bulb: Biblioteca criada para:
 - Aprender a publicar uma biblioteca no Pypi
