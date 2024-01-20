@@ -17,7 +17,7 @@
 - Encontrou bugs ou deseja novas funcionalidades? [Clique aqui](https://github.com/psgrigoletti/margemliquida-market-data/issues/new) e abra uma issue.
 
 
-# :test_tube: Pylint
+# :test_tube: Pylint:
 - pylint ./src/ | pylint_report > report.html
 - [Último report gerado](https://htmlpreview.github.io/?https://raw.githubusercontent.com/psgrigoletti/margemliquida-market-data/main/report.html)
 
