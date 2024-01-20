@@ -1,5 +1,3 @@
-import pytest
-
 from margemliquida_market_data.meu_fundamentus import meu_fundamentus
 
 

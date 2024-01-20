@@ -1,5 +1,3 @@
-import pytest
-
 from margemliquida_market_data.fundsexplorer import fundsexplorer
 
 
