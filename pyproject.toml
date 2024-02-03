@@ -29,6 +29,8 @@ pip = "^23.3.2"
 pandas = "2.1.4"
 numpy = "^1.26.3"
 selenium = "^4.16.0"
+matplotlib = "3.8.2"
+redis = "5.0.1"
 
 [tool.poetry.group.dev.dependencies]
 blue = "^0.9.1"
@@ -38,6 +40,7 @@ taskipy = "^1.12.2"
 ruff = "^0.1.13"
 isort = "^5.13.2"
 httpx = "0.24.1"
+ipykernel = "^6.29.0"
 
 [tool.poetry.group.doc.dependencies]
 mkdocs-material = "9.5.4"
